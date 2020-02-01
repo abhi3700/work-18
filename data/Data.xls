@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:x='urn:schemas-microsoft-com:office:excel' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+
+</style>
+<!--[if gte mso 9]>
+
+<![endif]-->
+</head>
+<body>
+<table rules="all" border="1" id="GridView1_ctl00" style="width:100%;table-layout:auto;empty-cells:show;">
+	<colgroup>
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+	</colgroup>
+<thead>
+		<tr>
+			<th scope="col">Lot ID</th><th scope="col">lot ID</th><th scope="col">WAFER_1</th><th scope="col">WAFER_2</th><th scope="col">FICD_VALUE</th><th scope="col">DICD_VALUE</th><th scope="col">FICD_Date</th><th scope="col">DICD_Date</th><th scope="col">DICD_PARAMETER</th><th scope="col">FICD_PARAMETER</th><th scope="col">BIAS</th><th scope="col">DOSE_VALUE</th>
+		</tr>
+	</thead><tbody>
+	<tr>
+		<td>F18370001.F1</td><td>F18370001.F1</td><td>4</td><td>4</td><td>327</td><td>250.8</td><td>02/08/2019</td><td>01/08/2019</td><td>DICD_AA_Dns_Line_Mean</td><td>FICD_AA_Dns_Line_Mean</td><td>76.20</td><td>18.2</td>
+	</tr><tr>
+		<td>F18370001.F1</td><td>F18370001.F1</td><td>24</td><td>24</td><td>501</td><td>249.8</td><td>02/08/2019</td><td>01/08/2019</td><td>DICD_AA_Iso_Line_Mean</td><td>FICD_AA_Iso_Line_Mean</td><td>251.20</td><td>18.2</td>
+	</tr><tr>
+		<td>F18370001.F1</td><td>F18370001.F1</td><td>4</td><td>4</td><td>502</td><td>249.9</td><td>02/08/2019</td><td>01/08/2019</td><td>DICD_AA_Iso_Line_Mean</td><td>FICD_AA_Iso_Line_Mean</td><td>252.10</td><td>18.2</td>
+	</tr><tr>
+		<td>F18370001.F1</td><td>F18370001.F1</td><td>14</td><td>14</td><td>326</td><td>251.9</td><td>02/08/2019</td><td>01/08/2019</td><td>DICD_AA_Dns_Line_Mean</td><td>FICD_AA_Dns_Line_Mean</td><td>74.10</td><td>18.2</td>
+	</tr><tr>
+		<td>F18370001.F1</td><td>F18370001.F1</td><td>14</td><td>14</td><td>503</td><td>253.9</td><td>02/08/2019</td><td>01/08/2019</td><td>DICD_AA_Iso_Line_Mean</td><td>FICD_AA_Iso_Line_Mean</td><td>249.10</td><td>18.2</td>
+	</tr><tr>
+		<td>F18370001.F1</td><td>F18370001.F1</td><td>24</td><td>24</td><td>327</td><td>250.7</td><td>02/08/2019</td><td>01/08/2019</td><td>DICD_AA_Dns_Line_Mean</td><td>FICD_AA_Dns_Line_Mean</td><td>76.30</td><td>18.2</td>
+	</tr>
+	</tbody>
+
+</table></body></html>
