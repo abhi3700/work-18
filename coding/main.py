@@ -1,8 +1,10 @@
+from tkinter import messagebox 
 import pandas as pd
 import plotly as py
 import plotly.graph_objs as go
-from input import *
 
+from input import *
+# from utils import *
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
@@ -11,6 +13,10 @@ from input import *
 "y1": DICD (y-axis) for Bias Chart
 "y2": FICD (y-axis) for Bias Chart
 "y3": Bias (y-axis) for Bias Chart
+"dicd_remarks": Date for DICD
+"ficd_remarks": Date for FICD
+"plot_title": Plot title
+"plot_html_filename": HTML filename for plot
 """
 def draw_plotly_bias_plot(x, y1, y2, y3, dicd_remarks, ficd_remarks, plot_title, plot_html_filename):
     trace1 = go.Scatter(
@@ -78,6 +84,7 @@ def draw_plotly_bias_plot(x, y1, y2, y3, dicd_remarks, ficd_remarks, plot_title,
     py.offline.plot(fig, filename= plot_html_filename)
 
 
+# ==========================================================================================
 def main():
     tables = pd.read_html('../data/Data.xls')       # returns a list of tables
     df = tables[0]      # first element of the list
@@ -97,11 +104,12 @@ def main():
     """
     dicd_lotid_list = df[dicd_lotid_col_name].tolist()      # DICD lot id list
     ficd_lotid_list = df[ficd_lotid_col_name].tolist()      # FICD lot id list
-    dicd_waferid_list = df[dicd_waferid_col_name].tolist()
-    ficd_waferid_list = df[ficd_waferid_col_name].tolist()
+    dicd_waferid_list = df[dicd_waferid_col_name].tolist()  # DICD wafer id list
+    ficd_waferid_list = df[ficd_waferid_col_name].tolist()  # FICD wafer id list
 
     if (dicd_lotid_list == ficd_lotid_list):
         if (dicd_waferid_list == ficd_waferid_list):
+            # -------------------------ISO--------------------------------
             df_iso_wafer_id = df_iso[dicd_waferid_col_name]
             df_iso_dicd = df_iso[dicd_val_col_name]
             df_iso_ficd = df_iso[ficd_val_col_name]
@@ -119,6 +127,7 @@ def main():
                 plot_title = plot_title_iso,
                 plot_html_filename = plot_html_filename_iso)
 
+            #------------------------------------DENSE------------------------------
             df_dense_wafer_id = df_dense[dicd_waferid_col_name]
             df_dense_dicd = df_dense[dicd_val_col_name]
             df_dense_ficd = df_dense[ficd_val_col_name]
@@ -137,16 +146,28 @@ def main():
                 plot_html_filename = plot_html_filename_dense)
 
         else:
-            print('SORRY! wafer_id column entries of \'DICD\' and \'FICD\' not matching. \nPlease rectify and try again... ')
+            master = Tk()
+            master.withdraw()
+            messagebox.showinfo('ERROR', 'SORRY! wafer_id column entries of \'DICD\' and \'FICD\' not matching. \nPlease rectify and try again... ')
 
     else:
-        print('SORRY! lot_id column entries of \'DICD\' and \'FICD\' not matching. \nPlease rectify and try again... ')
+        master = Tk()
+        master.withdraw()
+        messagebox.showinfo('ERROR', 'SORRY! lot_id column entries of \'DICD\' and \'FICD\' not matching. \nPlease rectify and try again... ')
 
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # MAIN Function call
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
-    main()
-
+    try:
+        main()
+    except ModuleNotFoundError:
+        master = Tk()
+        master.withdraw()
+        messagebox.showinfo('Exception ERROR', e)
+    except Exception as e:
+        master = Tk()
+        master.withdraw()
+        messagebox.showinfo('Error', 'something else happened' + str(e))
 

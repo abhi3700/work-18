@@ -1,6 +1,6 @@
 
 # Global variables
-line_color = '#3f51b5'      # line (trace0) color for any plot
+line_color = '#1e88e5'      # line (trace0) color for any plot
 marker_color = '#000000'    # marker color for any plot
 marker_border_color = '#ffffff'     # marker border color for any plot
 cl_color = '#ffa000'    # control limit line color for any plot
@@ -15,7 +15,7 @@ dicd_date = 'DICD_Date'
 dicd_param_col_name = 'DICD_PARAMETER'
 dicd_name = 'DICD'
 dicd_mode = 'lines+markers'
-dicd_line_color = '#456A8C'
+dicd_line_color = '#ffb300'
 dicd_marker_color = '#000000'
 dicd_marker_border_color = '#000000'
 
@@ -28,7 +28,7 @@ ficd_date = 'FICD_Date'
 ficd_param_col_name = 'FICD_PARAMETER'
 ficd_name = 'FICD'
 ficd_mode = 'lines+markers'
-ficd_line_color = '#8F6593'
+ficd_line_color = '#4caf50'
 ficd_marker_color = '#000000'
 ficd_marker_border_color = '#000000'
 

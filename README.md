@@ -1,6 +1,21 @@
 # work-18
 Bias monitor
 
+## Installation
+* Just install the executable file.
+
+### Packages
+* `pandas`: 1.0.0
+* `retrying`: 1.3.3
+* `plotly`: 4.3.0
+* `tkinter`: 1.3.2
+
+## Input
+* The input file has to be downloaded from DMIS.
+
+## Output
+* The output is a "CD Monitor" which has 2 main charts - __ISO__ & __DENSE__.
+
 ## Coding
 ### A. Data Wrangling
 * Here, the file extension doesn't match with its data type inside.
@@ -18,7 +33,8 @@ Bias monitor
 ```
 * the dataframe will be the 1st element in this list.
 * Now, ensure the DICD & FICD's respective columns (lotid, waferid) match. Otherwise, it will give the error.
-	-  (`DICD_lotid` == `FICD-lotid`) and (`DICD_waferid` == `FICD_waferid`) 
+	- (`DICD_lotid` == `FICD-lotid`) 
+	- (`DICD_waferid` == `FICD_waferid`) 
 * Then proceed with column filtering.
 
 ### B. Data Visualization
